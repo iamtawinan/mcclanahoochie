@@ -2225,7 +2225,7 @@ follows draft,since a final version supercedes a draft version).")
     (unless noninteractive
       (quack-download-srfi-subindex-files-if-missing))
 
-    ;; Parse the index files, letting entries for successive states supercede.
+    ;; Parse the index files, letting entries for successive states supersede.
     (mapcar (function
              (lambda (kind)
                (mapcar (function

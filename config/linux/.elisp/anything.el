@@ -738,7 +738,7 @@ anything completions with \.")
   "Overlays for digit shortcuts. See `anything-enable-shortcuts'.")
 
 (defvar anything-candidate-cache nil
-  "Holds the available candidate withing a single anything invocation.")
+  "Holds the available candidate within a single anything invocation.")
 
 (defvar anything-pattern
   "The input pattern used to update the anything buffer.")

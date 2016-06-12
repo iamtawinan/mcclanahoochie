@@ -352,7 +352,7 @@ __global__ void set_intersection_kernel(RandomAccessIterator1 first1,
     // it's always safe to eject all of s_range_with_lesser_bound
     // in this case, collapse s_range_with_lesser_bound to an empty range
     // else, we need to retain elements that were not intersected.
-    // this is a special case that occurs in the presense of multisets.
+    // this is a special case that occurs in the presence of multisets.
     if(range1_has_strictly_lesser_bound || range2_has_strictly_lesser_bound)
     {
       // ranges' bounds are not equivalent, it's safe to eject all of the range with lesser bound

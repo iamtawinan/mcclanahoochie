@@ -25,7 +25,7 @@
 ;; Only windows that are on the left edge of the frame are taken into
 ;; account. The vertical space available in the frame is first divided
 ;; among all these windows. Then any window requireing less lines than it
-;; got to display its whole buffer is shrinked, and the freed space is
+;; got to display its whole buffer is shrunk, and the freed space is
 ;; divided equally among all the other windows.
 ;;
 ;; If some vertical space remains afterwards, it is given in totality to
@@ -140,7 +140,7 @@ See `pack-windows-shrink-value'."
 Only windows that are on the left edge of the frame are taken into
 account. The vertical space available in the frame is first divided
 among all these windows. Then any window requireing less lines than it
-got to display its whole buffer is shrinked, and the freed space is
+got to display its whole buffer is shrunk, and the freed space is
 divided equally among all the other windows.
 
 If some vertical space remains afterwards, it is given in totality to
@@ -190,7 +190,7 @@ displayed in the echo area if `pack-windows-verbose' is non-nil."
 	  (save-selected-window
 	    (when (> (length windows) 1)
 	      ;; At each iteration we chose the window that has to be
-	      ;; shrinked the most, in an attempt to avoid killing
+	      ;; shrunk the most, in an attempt to avoid killing
 	      ;; neighbouring windows.
 	      (loop for iter from 1 to pack-windows-max-iteration
 		    finally (when pack-windows-verbose

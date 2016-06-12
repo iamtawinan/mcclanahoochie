@@ -810,7 +810,7 @@ in 'my-shebang-patterns."
 
 
 (defun swap-words (a b)
-  "Replace all occurances of a with b and vice versa"
+  "Replace all occurrences of a with b and vice versa"
   (interactive "*sFirst Swap Word: \nsSecond Swap Word: ")
   (save-excursion
     (while (re-search-forward (concat (regexp-quote a) "\\|" (regexp-quote b)))

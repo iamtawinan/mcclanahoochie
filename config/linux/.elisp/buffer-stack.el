@@ -133,7 +133,7 @@
   :link '(emacs-library-link :tag "Lisp File" "buffer-stack.el"))
 
 (defcustom buffer-stack-frame-local t
-  "Does each frame maintain a seperate buffer stack?
+  "Does each frame maintain a separate buffer stack?
 If you switch this off during a GNU Emacs session, the initial buffer
 ordering might be strange."
   :type 'boolean

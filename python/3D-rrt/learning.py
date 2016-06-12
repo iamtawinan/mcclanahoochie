@@ -156,7 +156,7 @@ class MajorityLearner(Learner):
 class NaiveBayesLearner(Learner):
     
     def train(self, dataset):
-        """Just count the target/attr/val occurences.
+        """Just count the target/attr/val occurrences.
         Count how many times each value of each attribute occurs.
         Store count in N[targetvalue][attr][val]. Let N[attr][None] be the
         sum over all vals."""

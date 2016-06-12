@@ -42,7 +42,7 @@ namespace thrust {
 /*! \p transform_inclusive_scan fuses the \p transform and \p inclusive_scan
  *  operations.  \p transform_inclusive_scan is equivalent to performing a
  *  tranformation defined by \p unary_op into a temporary sequence and then
- *  performing an \p inclusive_scan on the tranformed sequence.  In most
+ *  performing an \p inclusive_scan on the transformed sequence.  In most
  *  cases, fusing these two operations together is more efficient, since
  *  fewer memory reads and writes are required. In \p transform_inclusive_scan,
  *  <tt>unary_op(*first)</tt> is assigned to <tt>*result</tt> and the result
@@ -100,7 +100,7 @@ OutputIterator transform_inclusive_scan(InputIterator first,
 /*! \p transform_exclusive_scan fuses the \p transform and \p exclusive_scan
  *  operations.  \p transform_exclusive_scan is equivalent to performing a
  *  tranformation defined by \p unary_op into a temporary sequence and then
- *  performing an \p exclusive_scan on the tranformed sequence.  In most
+ *  performing an \p exclusive_scan on the transformed sequence.  In most
  *  cases, fusing these two operations together is more efficient, since
  *  fewer memory reads and writes are required. In
  *  \p transform_exclusive_scan, \p init is assigned to <tt>*result</tt>

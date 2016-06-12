@@ -447,7 +447,7 @@
          (jira-display-issues issues)))))
 
 (defun jira-search-issues (text)
-  "Displays a list of issues maching a fulltext search"
+  "Displays a list of issues matching a fulltext search"
   (interactive "sSearch: ")
   (let ((issues (jira-get-issues-from-text-search text)))
     (jira-with-jira-buffer

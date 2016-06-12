@@ -261,7 +261,7 @@ FORMAT-STRING:
 	    (fset 'message orig-function)))))
     (read-from-minibuffer prompt initial-contents keymap read hist)))
 
-;; This local bind of `current-load-list' is requred to keep the
+;; This local bind of `current-load-list' is required to keep the
 ;; position where real `shell-command' is defined.  If this local bind
 ;; is removed, `find-function' will tell that `shell-command' is
 ;; defined in shell-command.el instaed of simple.el.

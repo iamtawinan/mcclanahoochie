@@ -477,7 +477,7 @@ class CompositeMaterial(Material):
         return absorptions
     
     def trace(self, photon, free_pathlength):
-        '''Will apply absorption and emission probabilities to the photon along its free path in the present geometrical container and return the result photon for tracing. See help(material.trace) for how this is done for a single material because the same principle applies. The ensemble absorption coefficient is found for the specified photon to determine if absorption occurs. The absorbed material its self is found at random from a distrubution weighted by each of the component absorption coefficients. The resultant photon is returned with possibily with a new position, direction and wavelength. If the photon is absorbed and not emitted the photon is retuned but its active property is set to False. '''
+        '''Will apply absorption and emission probabilities to the photon along its free path in the present geometrical container and return the result photon for tracing. See help(material.trace) for how this is done for a single material because the same principle applies. The ensemble absorption coefficient is found for the specified photon to determine if absorption occurs. The absorbed material its self is found at random from a distribution weighted by each of the component absorption coefficients. The resultant photon is returned with possibily with a new position, direction and wavelength. If the photon is absorbed and not emitted the photon is retuned but its active property is set to False. '''
         
         absorptions = self.all_absorption_coefficients(photon.wavelength)
         absorption_coefficient = absorptions.sum()

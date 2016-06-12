@@ -343,7 +343,7 @@ the mode, respectively."
   ;; Deactivate the mark now if not using idle timers and deactivate-mark
   ;; is set in transient mark mode.  Normally the command loop does this
   ;; itself, but if this function is run from post-command-hook,
-  ;; deactivation is delayed and causes noticable, undesirable effects on
+  ;; deactivation is delayed and causes noticeable, undesirable effects on
   ;; the display.  The only time I've noticed this to be of consequence is
   ;; when point is right before a sexp and you insert a character.
   ;; Otherwise, this function doesn't get called again because after

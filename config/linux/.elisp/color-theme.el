@@ -176,7 +176,7 @@
 ;; :inverse-video handling differs in Emacs and XEmacs.  We therefore do
 ;; away with it.  When printing a color-theme, the inverse-video
 ;; attribute should be handled correctly without ever appearing in color
-;; themes.  For maintenance, the following might be usefull for
+;; themes.  For maintenance, the following might be useful for
 ;; query-replace-regexp.
 ;; :background "\([^"]*\)"\(.*\):foreground "\([^"]*\)"\(.*\) :inverse-video t
 ;; :background "\3"\2:foreground "\1"\4

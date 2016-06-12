@@ -8636,7 +8636,7 @@ Typing \\[verilog-auto] will make this into:
 	  (when v2k (verilog-repair-close-comma))
 	  )))))
 
-(defun verilog-auto-sense-sigs (modi presense-sigs)
+(defun verilog-auto-sense-sigs (modi presence-sigs)
   "Return list of signals for current autosense block."
   (let* ((sigss (verilog-read-always-signals))
 	 (sig-list (verilog-signals-not-params
@@ -8645,7 +8645,7 @@ Typing \\[verilog-auto] will make this into:
 							 (verilog-alw-get-outputs sigss))
 						    (verilog-modi-get-consts modi)
 						    (verilog-modi-get-gparams modi)
-						    presense-sigs)))))
+						    presence-sigs)))))
     sig-list))
 
 (defun verilog-auto-sense ()
@@ -8707,17 +8707,17 @@ Typing \\[verilog-auto] will make this into:
 			  (append
 			   (verilog-modi-get-regs modi)
 			   (verilog-modi-get-wires modi))))
-	   sig-list not-first presense-sigs)
+	   sig-list not-first presence-sigs)
       ;; Read signals in always, eliminate outputs from sense list
-      (setq presense-sigs (verilog-signals-from-signame
+      (setq presence-sigs (verilog-signals-from-signame
 			   (save-excursion
 			     (verilog-read-signals start-pt (point)))))
-      (setq sig-list (verilog-auto-sense-sigs modi presense-sigs))
+      (setq sig-list (verilog-auto-sense-sigs modi presence-sigs))
       (when sig-memories
 	(let ((tlen (length sig-list)))
 	  (setq sig-list (verilog-signals-not-in sig-list sig-memories))
 	  (if (not (eq tlen (length sig-list))) (insert " /*memory or*/ "))))
-      (if (and presense-sigs  ;; Add a "or" if not "(.... or /*AUTOSENSE*/"
+      (if (and presence-sigs  ;; Add a "or" if not "(.... or /*AUTOSENSE*/"
 	       (save-excursion (goto-char (point))
 			       (verilog-re-search-backward "[a-zA-Z0-9$_.%`]+" start-pt t)
 			       (verilog-re-search-backward "\\s-" start-pt t)
