@@ -1444,7 +1444,7 @@ If optional NOERROR, then we return t on success, and nil on failure."
 Optional argument INCLUDEELSE will stop on ELSE if it matches the starting IF."
   (interactive "P")
   (matlab-navigation-syntax
-    ;; skip over preceeding whitespace
+    ;; skip over preceding whitespace
     (skip-chars-forward " \t\n;")
     (if (or (not (looking-at (concat "\\("
 				     (matlab-block-beg-pre)
@@ -2142,7 +2142,7 @@ this line's indentation should be."
      )))
 
 (defun matlab-next-line-indentation ()
-  "Calculate the indentation for lines preceeding this command line."
+  "Calculate the indentation for lines preceding this command line."
   (let ((bc (matlab-lattr-block-cont))
 	(mc (matlab-lattr-middle-block-cont))
 	(ec (matlab-lattr-endless-block-cont))

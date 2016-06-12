@@ -394,7 +394,7 @@ def Zebra():
     Colors = 'Red Yellow Blue Green Ivory'.split()
     Pets = 'Dog Fox Snails Horse Zebra'.split()
     Drinks = 'OJ Tea Coffee Milk Water'.split()
-    Countries = 'Englishman Spaniard Norwegian Ukranian Japanese'.split()
+    Countries = 'Englishman Spaniard Norwegian Ukrainian Japanese'.split()
     Smokes = 'Kools Chesterfields Winston LuckyStrike Parliaments'.split()
     vars = Colors + Pets + Drinks + Countries + Smokes
     domains = {}
@@ -405,7 +405,7 @@ def Zebra():
     neighbors = parse_neighbors("""Englishman: Red;
                 Spaniard: Dog; Kools: Yellow; Chesterfields: Fox;
                 Norwegian: Blue; Winston: Snails; LuckyStrike: OJ;
-                Ukranian: Tea; Japanese: Parliaments; Kools: Horse;
+                Ukrainian: Tea; Japanese: Parliaments; Kools: Horse;
                 Coffee: Green; Green: Ivory""", vars)
     for type in [Colors, Pets, Drinks, Countries, Smokes]:
         for A in type:
@@ -423,7 +423,7 @@ def Zebra():
         if A == 'Kools' and B == 'Yellow': return same
         if A == 'Winston' and B == 'Snails': return same
         if A == 'LuckyStrike' and B == 'OJ': return same
-        if A == 'Ukranian' and B == 'Tea': return same
+        if A == 'Ukrainian' and B == 'Tea': return same
         if A == 'Japanese' and B == 'Parliaments': return same
         if A == 'Kools' and B == 'Horse': return next_to
         if A == 'Coffee' and B == 'Green': return same

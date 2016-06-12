@@ -237,7 +237,7 @@ class Visualiser (object):
         visual.box(pos=pos, size=size, color=colour, opacity=0.2)
         
     def addPhoton(self, photon):
-        """Draws a smallSphere with direction arrow and polariation (if data is avaliable)."""
+        """Draws a smallSphere with direction arrow and polariation (if data is available)."""
         self.addSmallSphere(photon.position)
         visual.arrow(pos=photon.position, axis=photon.direction * 0.0005, shaftwidth=0.0003, color=visual.color.magenta, opacity=0.8)
         if photon.polarisation != None:

@@ -274,7 +274,7 @@ def update(x, **entries):
 # argument first (like reduce, filter, and map).
 
 def removeall(item, seq):
-    """Return a copy of seq (or string) with all occurences of item removed.
+    """Return a copy of seq (or string) with all occurrences of item removed.
     >>> removeall(3, [1, 2, 3, 3, 2, 1, 3])
     [1, 2, 2, 1]
     >>> removeall(4, [1, 2, 3])

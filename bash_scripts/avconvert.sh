@@ -292,7 +292,7 @@ cleanup=`egrep -v "deprecated|ppm16" /tmp/convert.$$.$count` >/tmp/$$
 mv /tmp/$$ /tmp/convert.$$.$count
 if test -s /tmp/convert.$$.$count
 	then	message=`cat /tmp/convert.$$.$count`
-		zenity --info --text="An error occured during the conversion\n\nThe message was: $message" &
+		zenity --info --text="An error occurred during the conversion\n\nThe message was: $message" &
 	else	rm -f /tmp/convert.$$.$count
 fi
 

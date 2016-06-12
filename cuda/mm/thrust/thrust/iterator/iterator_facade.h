@@ -23,7 +23,7 @@
 
 /*! \file iterator_facade.h
  *  \brief Defines a class which exposes the public
- *         interface that all iterators accessable from the
+ *         interface that all iterators accessible from the
  *         host and device must implement.  Based on
  *         Boost's iterator_facade class.
  */

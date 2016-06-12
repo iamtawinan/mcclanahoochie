@@ -111,7 +111,7 @@ fi
 echo "15" ;
 
 if true ; then
-    echo "# Installing webupd8 reccomended packages..."
+    echo "# Installing webupd8 recommended packages..."
     sudo apt-get -y --force-yes install \
     gstreamer0.10-ffmpeg \
     gstreamer0.10-plugins-base \

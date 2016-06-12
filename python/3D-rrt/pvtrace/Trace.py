@@ -664,7 +664,7 @@ class Scene(object):
             separations = []
             for obj in containers:
                 intersection_point = obj.shape.intersection(photon)
-                assert len(intersection_point) == 1, "A primative containing object can only have one intersection point with a line when the origin of the test ray is contained by the object."
+                assert len(intersection_point) == 1, "A primitive containing object can only have one intersection point with a line when the origin of the test ray is contained by the object."
                 separations.append(separation(photon.position, intersection_point[0]))
             min_index = np.array(separations).argmin()
             return containers[min_index]
